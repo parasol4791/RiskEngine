@@ -110,6 +110,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="PayOffEuropeanCall.h" />
+    <ClInclude Include="PayOffEuropeanPut.h" />
+    <ClInclude Include="PayOff_I.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PayOffEuropeanCall.cpp" />
+    <ClCompile Include="PayOffEuropeanPut.cpp" />
+    <ClCompile Include="PayOff_I.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
