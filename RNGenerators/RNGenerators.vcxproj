@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{52DB38BD-972A-462B-9943-E42CF06B97EB}</ProjectGuid>
-    <RootNamespace>Payoffs</RootNamespace>
+    <ProjectGuid>{4212688C-4E75-4555-BF8A-534DCF58AC31}</ProjectGuid>
+    <RootNamespace>RNGenerators</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,14 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PayOffEuropeanCall.h" />
-    <ClInclude Include="PayOffEuropeanPut.h" />
-    <ClInclude Include="PayOff_I.h" />
+    <ClInclude Include="RNGen_I.h" />
+    <ClInclude Include="RNGen_StandardNormal_BoxMuller.h" />
+    <ClInclude Include="RNGen_Uniform.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PayOffEuropeanCall.cpp" />
-    <ClCompile Include="PayOffEuropeanPut.cpp" />
-    <ClCompile Include="PayOff_I.cpp" />
+    <ClCompile Include="RNGen_I.cpp" />
+    <ClCompile Include="RNGen_StandardNormal_BoxMuller.cpp" />
+    <ClCompile Include="RNGen_Uniform.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

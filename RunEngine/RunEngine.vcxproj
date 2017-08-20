@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{52DB38BD-972A-462B-9943-E42CF06B97EB}</ProjectGuid>
-    <RootNamespace>Payoffs</RootNamespace>
+    <ProjectGuid>{3DC4A5BA-4DCB-4A13-9285-7D07E9FC7863}</ProjectGuid>
+    <RootNamespace>RunEngine</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -68,7 +68,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\boost_1_64_0;$(IncludePath)</IncludePath>
+    <SourcePath>D:\boost_1_64_0;$(SourcePath)</SourcePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -82,11 +85,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
-    <Link>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
-      <SubSystem>Console</SubSystem>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -115,14 +113,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PayOffEuropeanCall.h" />
-    <ClInclude Include="PayOffEuropeanPut.h" />
-    <ClInclude Include="PayOff_I.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="PayOffEuropeanCall.cpp" />
-    <ClCompile Include="PayOffEuropeanPut.cpp" />
-    <ClCompile Include="PayOff_I.cpp" />
+    <ClCompile Include="RunEngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
