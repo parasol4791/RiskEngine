@@ -71,6 +71,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>D:\boost_1_64_0;$(IncludePath)</IncludePath>
     <SourcePath>D:\boost_1_64_0;$(SourcePath)</SourcePath>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -86,6 +87,12 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(RiskEngineRoot)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\Synch\RiskEngine\RiskEngine\RunEngine\x64\Debug\Maths.lib;D:\Synch\RiskEngine\RiskEngine\RunEngine\x64\Debug\RNGenerators.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>
+      </SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -115,6 +122,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="RunEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Maths\Maths.vcxproj">
+      <Project>{b1c54b55-f010-4d02-b2f1-e5102edee4b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Payoffs\Payoffs.vcxproj">
+      <Project>{88ef64b2-b00c-46ac-8e7b-ffc4a6794cac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\RNGenerators\RNGenerators.vcxproj">
+      <Project>{60aaa912-2600-4edc-8f9e-fb0016ef5abb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

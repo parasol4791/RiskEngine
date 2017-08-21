@@ -12,5 +12,16 @@ public:
 		size_t n,
 		std::vector<double>& rnVec
 	) const;
+
+private:
+	void getStNorm(
+		double& z1,
+		double& z2,
+		size_t n = 2 // how many RNs to return (1 or 2)
+	) const;
+
 };
+
+
+	
 
