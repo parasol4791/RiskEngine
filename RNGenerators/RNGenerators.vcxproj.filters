@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="RNGen_I.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RNGen_Uniform.h">
+    <ClInclude Include="RNGen_StandardNormal_BoxMuller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RNGen_StandardNormal_BoxMuller.h">
+    <ClInclude Include="RNGen_Uniform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,10 +32,10 @@
     <ClCompile Include="RNGen_I.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RNGen_Uniform.cpp">
+    <ClCompile Include="RNGen_StandardNormal_BoxMuller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RNGen_StandardNormal_BoxMuller.cpp">
+    <ClCompile Include="RNGen_Uniform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
