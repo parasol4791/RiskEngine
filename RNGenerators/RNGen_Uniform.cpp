@@ -3,7 +3,7 @@
 using namespace std;
 
 
-RNGen_Uniform::RNGen_Uniform()
+RNGen_Uniform::RNGen_Uniform(int seed) : RNGen_I(seed)
 {
 }
 

@@ -2,7 +2,7 @@
 
 
 
-RNGen_I::RNGen_I()
+RNGen_I::RNGen_I(int seed) : seed_m(seed)
 {
 }
 

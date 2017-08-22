@@ -4,7 +4,7 @@ class RNGen_StandardNormal_BoxMuller :
 	public RNGen_I
 {
 public:
-	RNGen_StandardNormal_BoxMuller();
+	RNGen_StandardNormal_BoxMuller(int seed = 0);
 	virtual ~RNGen_StandardNormal_BoxMuller();
 
 	virtual double getRN() const;

@@ -1,9 +1,10 @@
 #include "RNGen_StandardNormal_BoxMuller.h"
 #include "RNGen_Uniform.h"
 #include "Maths/MathFunctions.h"
+#include <vector>
 
 
-RNGen_StandardNormal_BoxMuller::RNGen_StandardNormal_BoxMuller()
+RNGen_StandardNormal_BoxMuller::RNGen_StandardNormal_BoxMuller(int seed) : RNGen_I(seed)
 {
 }
 
@@ -24,7 +25,7 @@ void RNGen_StandardNormal_BoxMuller::getRN(
 ) const
 {
 	rnVec.resize(n);
-	size_t single = n / 2;
+	size_t single = n % 2;
 	size_t nPairs = (n - single) / 2;
 	double z1, z2;
 	for (size_t i = 0; i < nPairs; ++i)
@@ -46,15 +47,14 @@ void RNGen_StandardNormal_BoxMuller::getStNorm(
 	size_t n
 ) const
 {
-	RNGen_Uniform uniformGen;
-	double u1 = uniformGen.getRN();
-	double u2 = uniformGen.getRN();
+	std::vector<double> U;
+	RNGen_Uniform uniformGen(seed_m);
+	uniformGen.getRN(2, U);
 
-	double twoPi = 2.0 * MathFunctions::pi();
-	double first = sqrt(twoPi*u1);
-	double arg = twoPi * u2;
+	double first = sqrt(-2.0*log(U[0]));
+	double arg = 2.0 * MathFunctions::pi() * U[1];
 
 	z1 = first * sin(arg);
-	if (n<2)
+	if (n==2)
 		z2 = first * cos(arg);
 }

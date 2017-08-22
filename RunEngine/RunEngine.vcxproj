@@ -88,7 +88,7 @@
       <AdditionalIncludeDirectories>$(RiskEngineRoot)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>D:\Synch\RiskEngine\RiskEngine\RunEngine\x64\Debug\Maths.lib;D:\Synch\RiskEngine\RiskEngine\RunEngine\x64\Debug\RNGenerators.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>
       </SubSystem>

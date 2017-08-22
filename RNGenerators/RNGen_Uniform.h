@@ -4,7 +4,7 @@ class RNGen_Uniform :
 	public RNGen_I
 {
 public:
-	RNGen_Uniform();
+	RNGen_Uniform(int seed = 0);
 	virtual ~RNGen_Uniform();
 
 	virtual double getRN() const;
