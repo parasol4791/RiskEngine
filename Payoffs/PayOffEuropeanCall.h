@@ -8,6 +8,7 @@ public:
 	PayOffEuropeanCall(double strike);
 	virtual ~PayOffEuropeanCall();
 
+	virtual PayOff_I* clone() const;
 	virtual double operator()(double spot) const;
 
 private:

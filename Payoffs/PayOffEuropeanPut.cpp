@@ -9,6 +9,11 @@ PayOffEuropeanPut::~PayOffEuropeanPut()
 {
 }
 
+PayOff_I* PayOffEuropeanPut::clone() const
+{
+	return new PayOffEuropeanPut(*this);
+}
+
 double PayOffEuropeanPut::operator()(double spot) const
 {
 	return std::max(strike_m-spot, 0.0);
