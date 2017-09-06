@@ -1,5 +1,6 @@
 #include "InstrOptionVanilla.h"
 
+using namespace DKRiskEngine;
 
 InstrOptionVanilla::InstrOptionVanilla(
 	const PayOff_I& payOff,

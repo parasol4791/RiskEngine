@@ -3,6 +3,8 @@
 #include "Maths/MathFunctions.h"
 #include <vector>
 
+using namespace DKRiskEngine;
+
 
 RNGen_StandardNormal_BoxMuller::RNGen_StandardNormal_BoxMuller(int seed) : RNGen_I(seed)
 {

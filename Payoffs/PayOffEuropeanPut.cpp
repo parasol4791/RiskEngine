@@ -1,6 +1,8 @@
 #include "PayOffEuropeanPut.h"
 #include <algorithm>
 
+using namespace DKRiskEngine;
+
 PayOffEuropeanPut::PayOffEuropeanPut(double strike) : strike_m(strike)
 {
 }

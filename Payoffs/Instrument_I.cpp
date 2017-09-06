@@ -1,7 +1,7 @@
 #include "Instrument_I.h"
 
 using namespace std;
-
+using namespace DKRiskEngine;
 
 Instrument_I::Instrument_I(const PayOff_I& payOff)
 {

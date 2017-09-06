@@ -1,7 +1,7 @@
 #include "PayOffEuropeanCall.h"
 #include <algorithm>
 
-
+using namespace DKRiskEngine;
 
 PayOffEuropeanCall::PayOffEuropeanCall(double strike) : strike_m(strike)
 {

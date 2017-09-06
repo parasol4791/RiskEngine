@@ -4,6 +4,7 @@
 #include "RNGenerators/RNGen_StandardNormal_BoxMuller.h"
 
 using namespace std;
+using namespace DKRiskEngine;
 
 int main()
 {

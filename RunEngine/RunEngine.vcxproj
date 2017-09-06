@@ -124,6 +124,9 @@
     <ClCompile Include="RunEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MarketData\MarketData.vcxproj">
+      <Project>{a167cd1d-b8d8-4f83-b7ae-064bc7db2e81}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Maths\Maths.vcxproj">
       <Project>{b1c54b55-f010-4d02-b2f1-e5102edee4b7}</Project>
     </ProjectReference>

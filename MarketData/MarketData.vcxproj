@@ -89,6 +89,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(RiskEngineRoot)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -128,6 +129,34 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Curve.h" />
+    <ClInclude Include="CurveFlat.h" />
+    <ClInclude Include="Market.h" />
+    <ClInclude Include="MarketData_I.h" />
+    <ClInclude Include="Scalar.h" />
+    <ClInclude Include="Surface.h" />
+    <ClInclude Include="SurfaceFlat.h" />
+    <ClInclude Include="Tag.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Curve.cpp" />
+    <ClCompile Include="CurveFlat.cpp" />
+    <ClCompile Include="Market.cpp" />
+    <ClCompile Include="MarketData_I.cpp" />
+    <ClCompile Include="Scalar.cpp" />
+    <ClCompile Include="Surface.cpp" />
+    <ClCompile Include="SurfaceFlat.cpp" />
+    <ClCompile Include="Tag.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Maths\Maths.vcxproj">
+      <Project>{b1c54b55-f010-4d02-b2f1-e5102edee4b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{8db0caa6-7039-44fb-a52b-3d8cb79baef8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

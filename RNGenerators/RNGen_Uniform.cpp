@@ -1,6 +1,7 @@
 #include "RNGen_Uniform.h"
 
 using namespace std;
+using namespace DKRiskEngine;
 
 
 RNGen_Uniform::RNGen_Uniform(int seed) : RNGen_I(seed)
