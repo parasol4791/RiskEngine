@@ -8,15 +8,15 @@ namespace DKRiskEngine
 
 	enum MDataType
 	{
-		MDType_Spot = 1,
-		MDType_YieldCurve = 2,
-		MDType_VolSurface = 3
+		MDType_Spot,
+		MDType_YieldCurve,
+		MDType_VolSurface
 	};
 
 	enum MDField
 	{
-		MDField_Currency = 1,
-		MDField_ID = 2
+		MDField_Currency,
+		MDField_ID
 	};
 
 	class MDTag
