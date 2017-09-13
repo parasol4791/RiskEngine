@@ -16,6 +16,8 @@ namespace DKRiskEngine
 		);
 		virtual ~InstrOptionVanilla();
 
+		virtual void checkSanity(const Market::CPtr& market) const;
+
 		double getExpiry() const { return expiry_m; }
 
 	private:

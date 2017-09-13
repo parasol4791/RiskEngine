@@ -18,18 +18,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MathFunctions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DistributionNormal.h">
+    <ClInclude Include="BlackScholes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MathFunctions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DistributionNormal.cpp">
+    <ClCompile Include="BlackScholes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #include "InstrOptionVanilla.h"
+#include "Utils\Exceptions.h"
 
 using namespace DKRiskEngine;
 
@@ -14,4 +15,11 @@ InstrOptionVanilla::InstrOptionVanilla(
 
 InstrOptionVanilla::~InstrOptionVanilla()
 {
+}
+
+void InstrOptionVanilla::checkSanity(const Market::CPtr& market) const
+{
+	double nowDate = market->getNowDate();
+	if (expiry_m < nowDate)
+		throwException("Expired vanilla instrument");
 }

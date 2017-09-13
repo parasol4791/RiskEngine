@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B1C54B55-F010-4D02-B2F1-E5102EDEE4B7}</ProjectGuid>
+    <ProjectGuid>{EDD11F22-0403-4C2F-9200-B1B2435C3822}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Maths</RootNamespace>
+    <RootNamespace>Analytic</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Maths</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -132,12 +131,24 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DistributionNormal.h" />
-    <ClInclude Include="MathFunctions.h" />
+    <ClInclude Include="BlackScholes.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DistributionNormal.cpp" />
-    <ClCompile Include="MathFunctions.cpp" />
+    <ClCompile Include="BlackScholes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarketData\MarketData.vcxproj">
+      <Project>{a167cd1d-b8d8-4f83-b7ae-064bc7db2e81}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Maths\Maths.vcxproj">
+      <Project>{b1c54b55-f010-4d02-b2f1-e5102edee4b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Payoffs\Payoffs.vcxproj">
+      <Project>{88ef64b2-b00c-46ac-8e7b-ffc4a6794cac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{8db0caa6-7039-44fb-a52b-3d8cb79baef8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
