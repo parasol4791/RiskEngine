@@ -37,6 +37,10 @@ namespace DKRiskEngine
 			const std::string& id = ""
 		);
 
+		std::string toString() const;
+		static const char* toString(const MDataType mdType);
+		static const char* toString(const MDField mdField);
+
 	private:
 		int compare(
 			const MDFieldsMap::const_iterator& iter1,

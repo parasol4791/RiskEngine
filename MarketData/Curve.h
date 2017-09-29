@@ -12,7 +12,10 @@ namespace DKRiskEngine
 		Curve();
 		virtual ~Curve();
 
-		virtual double getDF(double t) const = 0;
+		virtual double getDF(double t1, double t2) const = 0;
+
+	protected:
+		void checkDates(double t1, double t2) const;
 	};
 
 }

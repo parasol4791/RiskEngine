@@ -14,7 +14,7 @@ namespace DKRiskEngine
 		virtual ~CurveFlat();
 
 		virtual MarketData_I* clone() const { return new CurveFlat(*this); }
-		virtual double getDF(double t) const;
+		virtual double getDF(double t1, double t2) const;
 
 	private:
 		double rate_m;

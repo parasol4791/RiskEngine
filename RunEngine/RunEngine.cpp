@@ -5,8 +5,10 @@
 #include "MarketData/Market.h"
 #include "Utils\Exceptions.h"
 #include "Maths\DistributionNormal.h"
+#include "Maths\MathFunctions.h"
 
 #include <time.h>
+#include <iomanip>
 
 using namespace std;
 using namespace DKRiskEngine;
@@ -15,6 +17,21 @@ int main()
 {
 	try
 	{
+		double a;
+		cin >> a;
+		//double a = 1.0e+3;
+		double eps = 5.0e-15*a;
+		double aplus = a + eps;
+		double aminus = a - eps;
+		
+
+		cout << std::setprecision(38) << a << endl;
+		cout << aminus << endl;
+		cout << aplus << endl;
+		cout << "eps: " << eps << endl;
+
+		cout << "std::equal: " << MathFunctions::equalToEps(aplus, aminus) << endl;
+
 		Market market;
 
 		string ccy("usd");
@@ -35,6 +52,7 @@ int main()
 
 		PayOffEuropeanCall call1(100.0);
 		InstrOptionVanilla callOpt(call1, 0.5);
+		//market.getSpot(callOpt.get);
 
 		DistributionNormal norm(1.0, 3.0);
 		size_t dLimit = numeric_limits<long double>::digits10+1;

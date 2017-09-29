@@ -1,7 +1,9 @@
 #include "Market.h"
-#include "Scalar.h"
 #include "CurveFlat.h"
 #include "SurfaceFlat.h"
+#include "Utils\Exceptions.h"
+
+#include <sstream>
 
 using namespace std;
 using namespace DKRiskEngine;
@@ -14,6 +16,36 @@ Market::Market(double nowDate) :
 	nowDate_m(nowDate),
 	marketData_m()
 {}
+
+MarketData_I::CPtr Market::get(const MDTag& tag) const
+{
+	MDMap::const_iterator iter = marketData_m.find(tag);
+	if (iter != marketData_m.end())
+		return iter->second;
+	else
+	{
+		stringstream ss;
+		ss << "Market data " << tag.toString() << " is not found";
+		throwException(ss.str());
+		return NULL;
+	}
+}
+
+Scalar::CPtr
+Market::getSpot(const MDTag& tag) const
+{
+	MarketData_I::CPtr md = get(tag);
+	Scalar::CPtr spot = dynamic_pointer_cast<const Scalar>(md);
+	if (spot)
+		return spot;
+	else
+	{
+		stringstream ss;
+		ss << "Market data object " << tag.toString() << " is not Spot";
+		throwException(ss.str());
+		return NULL;
+	}
+}
 
 void Market::add(
 	const MDTag& tag,

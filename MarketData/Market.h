@@ -1,6 +1,7 @@
 #pragma once
 #include "MarketData_I.h"
 #include "Tag.h"
+#include "Scalar.h"
 #include <map>
 #include <string>
 
@@ -20,6 +21,11 @@ namespace DKRiskEngine
 
 		virtual MarketData_I* clone() const { return new Market(*this); }
 		double getNowDate() const { return nowDate_m; }
+
+		MarketData_I::CPtr get(const MDTag& tag) const;
+
+		Scalar::CPtr getSpot(const MDTag& tag) const;
+		
 
 		void add(
 			const MDTag& tag,
@@ -48,6 +54,7 @@ namespace DKRiskEngine
 			const std::string& ccy,
 			const std::string& id = ""
 		);
+
 
 	private:
 		double nowDate_m;

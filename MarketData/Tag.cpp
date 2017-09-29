@@ -1,8 +1,61 @@
 #include "Tag.h"
 #include "Utils\StringUtils.h"
+#include "Utils\Exceptions.h"
+
+#include <sstream>
 
 using namespace std;
 using namespace DKRiskEngine;
+
+/////////////////
+/// Enums
+//////////////////
+
+const char*
+MDTag::toString(const MDataType mdType)
+{
+	switch (mdType)
+	{
+		case MDType_Spot: return "Spot";
+		case MDType_YieldCurve: return "YieldCurve";
+		case MDType_VolSurface: return "VolSurface";
+		default: 
+		{
+			throwException("Unknown Market Data type");
+			return "";
+		}
+	}
+}
+
+const char*
+MDTag::toString(const MDField mdField)
+{
+	switch (mdField)
+	{
+		case MDField_Currency: return "Ccy";
+		case MDField_ID: "ID";
+		default:
+		{
+			throwException("Unknown Market Data field type");
+			return "";
+		}
+	}
+}
+
+string MDTag::toString() const
+{
+	const char* sep1(":");
+	const char* sep2("-");
+	stringstream ss;
+	ss << "[" << toString(mDataType_m);
+	MDFieldsMap::const_iterator iter = fields_m.begin();
+	for (; iter != fields_m.end(); ++iter)
+	{
+		ss << sep1 << toString(iter->first) << sep2 << iter->second;
+	}
+	ss << "]";
+	return ss.str();
+}
 
 /////////////////
 /// Class MDTag
@@ -82,4 +135,5 @@ MDTag::makeTag(
 
 	return tag;
 }
+
 

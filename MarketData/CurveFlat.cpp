@@ -12,4 +12,8 @@ CurveFlat::~CurveFlat()
 {
 }
 
-double CurveFlat::getDF(double t) const { return exp(-rate_m * t); }
+double CurveFlat::getDF(double t1, double t2) const
+{
+	checkDates(t1, t2);
+	return exp(-rate_m * (t2-t1));
+}

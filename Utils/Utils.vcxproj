@@ -132,11 +132,13 @@
   <ItemGroup>
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Memory.h" />
+    <ClInclude Include="NumConst.h" />
     <ClInclude Include="StringUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="NumConst.cpp" />
     <ClCompile Include="StringUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
