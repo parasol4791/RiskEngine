@@ -2,20 +2,21 @@
 #include "Utils\Exceptions.h"
 
 using namespace DKRiskEngine;
+using namespace std;
 
 InstrOptionVanilla::InstrOptionVanilla(
 	const PayOff_I& payOff,
-	double expiry
+	const double expiry,
+	const string& ccy,
+	const string& id
 ) :
-	Instrument_I(payOff),
+	Instrument_I(payOff, ccy, id),
 	expiry_m(expiry)
 {
 }
 
 
-InstrOptionVanilla::~InstrOptionVanilla()
-{
-}
+InstrOptionVanilla::~InstrOptionVanilla() {}
 
 void InstrOptionVanilla::checkSanity(const Market::CPtr& market) const
 {

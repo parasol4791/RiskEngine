@@ -51,8 +51,8 @@ int main()
 		market.addFlatSurface(0.55, ccy);  //TODO:  add exception if a duplicate is attempted to be added
 
 		PayOffEuropeanCall call1(100.0);
-		InstrOptionVanilla callOpt(call1, 0.5);
-		//market.getSpot(callOpt.get);
+		InstrOptionVanilla callOpt(call1, 0.5, ccy, "myOpt");
+		Scalar::CPtr spot = market.getSpot(callOpt.makeTag(MDType_Spot));
 
 		DistributionNormal norm(1.0, 3.0);
 		size_t dLimit = numeric_limits<long double>::digits10+1;

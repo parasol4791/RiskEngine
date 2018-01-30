@@ -138,7 +138,6 @@
     <ClInclude Include="Scalar.h" />
     <ClInclude Include="Surface.h" />
     <ClInclude Include="SurfaceFlat.h" />
-    <ClInclude Include="Tag.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Curve.cpp" />
@@ -148,9 +147,11 @@
     <ClCompile Include="Scalar.cpp" />
     <ClCompile Include="Surface.cpp" />
     <ClCompile Include="SurfaceFlat.cpp" />
-    <ClCompile Include="Tag.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassManagement\ClassManagement.vcxproj">
+      <Project>{fbd2d053-5141-4843-a988-e57f5cb28534}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Maths\Maths.vcxproj">
       <Project>{b1c54b55-f010-4d02-b2f1-e5102edee4b7}</Project>
     </ProjectReference>

@@ -61,7 +61,7 @@ string MDTag::toString() const
 /// Class MDTag
 //////////////////
 
-MDTag::MDTag(MDataType type) :
+MDTag::MDTag(const MDataType type) :
 	mDataType_m(type)
 {}
 

@@ -25,7 +25,7 @@ namespace DKRiskEngine
 		DefineSharedPtr(MDTag)
 
 		typedef std::multimap<MDField, std::string> MDFieldsMap;
-		MDTag(MDataType type);
+		MDTag(const MDataType type);
 		void addCcy(const std::string& ccy);
 		void addID(const std::string& id);
 

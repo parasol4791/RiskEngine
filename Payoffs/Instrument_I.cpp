@@ -3,14 +3,17 @@
 using namespace std;
 using namespace DKRiskEngine;
 
-Instrument_I::Instrument_I(const PayOff_I& payOff)
+Instrument_I::Instrument_I(
+	const PayOff_I& payOff,
+	const string& ccy,
+	const string& id
+) :
+	Taggable_I(ccy, id)
 {
 	payOff_m.reset(payOff.clone());
 }
 
-Instrument_I::~Instrument_I()
-{
-}
+Instrument_I::~Instrument_I() {}
 
 double Instrument_I::computePayoff(double spot) const
 {

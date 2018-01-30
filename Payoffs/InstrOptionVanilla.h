@@ -12,7 +12,9 @@ namespace DKRiskEngine
 
 		InstrOptionVanilla(
 			const PayOff_I& payOff,
-			double expiry
+			const double expiry,
+			const std::string& ccy,
+			const std::string& id
 		);
 		virtual ~InstrOptionVanilla();
 

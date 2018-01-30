@@ -1,6 +1,6 @@
 #pragma once
 #include "MarketData_I.h"
-#include "Tag.h"
+#include "ClassManagement\Tag.h"
 #include "Scalar.h"
 #include <map>
 #include <string>

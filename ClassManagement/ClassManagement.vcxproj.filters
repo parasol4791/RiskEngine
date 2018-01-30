@@ -18,48 +18,18 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MarketData_I.h">
+    <ClInclude Include="Taggable_I.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Curve.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CurveFlat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Surface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SurfaceFlat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scalar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Market.h">
+    <ClInclude Include="Tag.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MarketData_I.cpp">
+    <ClCompile Include="Taggable_I.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Curve.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CurveFlat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Surface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SurfaceFlat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Scalar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Market.cpp">
+    <ClCompile Include="Tag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{88EF64B2-B00C-46AC-8E7B-FFC4A6794CAC}</ProjectGuid>
+    <ProjectGuid>{FBD2D053-5141-4843-A988-E57F5CB28534}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Payoffs</RootNamespace>
+    <RootNamespace>ClassManagement</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -131,22 +131,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InstrOptionVanilla.h" />
-    <ClInclude Include="Instrument_I.h" />
-    <ClInclude Include="PayOffEuropeanCall.h" />
-    <ClInclude Include="PayOffEuropeanPut.h" />
-    <ClInclude Include="PayOff_I.h" />
+    <ClInclude Include="Tag.h" />
+    <ClInclude Include="Taggable_I.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InstrOptionVanilla.cpp" />
-    <ClCompile Include="Instrument_I.cpp" />
-    <ClCompile Include="PayOffEuropeanCall.cpp" />
-    <ClCompile Include="PayOffEuropeanPut.cpp" />
-    <ClCompile Include="PayOff_I.cpp" />
+    <ClCompile Include="Tag.cpp" />
+    <ClCompile Include="Taggable_I.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassManagement\ClassManagement.vcxproj">
-      <Project>{fbd2d053-5141-4843-a988-e57f5cb28534}</Project>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{8db0caa6-7039-44fb-a52b-3d8cb79baef8}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
