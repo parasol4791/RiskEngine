@@ -18,13 +18,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RNGen_I.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RNGen_StandardNormal_BoxMuller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RNGen_Uniform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RNGen_I.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
